@@ -21,15 +21,15 @@ public class AverageOfSelectedNumbers {
         }
 
         pAverage = numbers
-                .stream()
-                .mapToDouble(s -> Integer.valueOf(s))
-                .filter(s -> s > 0)
-                .average()
-                .getAsDouble();
+                .stream() //filter elements of list
+                .mapToInt(s -> Integer.valueOf(s)) //transform string to int
+                .filter(s -> s > 0) //filter positive elements
+                .average() //take average
+                .getAsDouble(); //get double result
 
         nAverage = numbers
                 .stream()
-                .mapToDouble(Integer :: valueOf)
+                .mapToInt(Integer :: valueOf)
                 .filter(s -> s < 0)
                 .average()
                 .getAsDouble();
