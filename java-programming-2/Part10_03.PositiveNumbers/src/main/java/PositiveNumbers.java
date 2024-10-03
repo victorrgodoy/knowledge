@@ -17,9 +17,9 @@ public class PositiveNumbers {
     }
 
     public static List<Integer> positive(List<Integer> numbers){
-        ArrayList<Integer> arrayList =  numbers.stream()
+        ArrayList<Integer> arrayList =  numbers.stream() 
                                         .filter(n -> n > 0)
-                                        .collect(Collectors.toCollection(ArrayList::new));
+                                        .collect(Collectors.toCollection(ArrayList::new)); // create a new list with numbers of filter
 
         return arrayList;
     }
